@@ -1,15 +1,15 @@
 'use strict';
 
 const bodyParser = require('body-parser');
-const express = require('express');
-const morgan = require('morgan');
 const debug = require('debug');
+const express = require('express');
+const helmet = require('helmet');
+const morgan = require('morgan');
 
 let app = express();
 
-app.set('x-powered-by', false);
-
 app.use(morgan('dev'));
+app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
