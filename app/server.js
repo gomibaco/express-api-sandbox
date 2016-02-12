@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require('./index');
+const app = require('./express');
 const cluster = require('express-cluster');
 const http = require('http');
 
